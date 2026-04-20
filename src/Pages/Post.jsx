@@ -2,7 +2,7 @@ import React, { useEffect, useState} from 'react'
 import { Container,PostCard } from '../Components'
 import { useNavigate,  useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import service from '../AppWrite/DBServices.js';
+import service from '../Appwrite/DBServices';
 import { setCurrentPost } from '../Store/PostSlice';
 import { clearPosts } from '../Store/PostSlice'
 import { Link } from 'react-router-dom'
