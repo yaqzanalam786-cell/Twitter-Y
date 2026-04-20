@@ -4,7 +4,7 @@ import { useNavigate,  useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import service from '../Appwrite/DBServices';
 import { setCurrentPost } from '../Store/PostSlice';
-import { clearPosts } from '../Store/PostSlice'
+import { clearPosts,dltPost } from '../Store/PostSlice'
 import { Link } from 'react-router-dom'
 import {Button} from '../Components'
 
@@ -55,6 +55,7 @@ function Post() {
       await service.dltfile(post.featuredImage)
     }
     dispatch(dltPost(post.$id)) 
+    navigate("/")
   }
 }
 
@@ -70,7 +71,7 @@ function Post() {
                                     Edit
                                 </Button>
                             </Link>
-                            <Button bgColor="bg-red-500" onClick={deletePost} className="cursor-pointer">
+                            <Button bgColor="bg-red-500" onClick={() => deletePost(post)} className="cursor-pointer">
                                 Delete
                             </Button>
                         </div>
