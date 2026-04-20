@@ -1,7 +1,7 @@
 import React from 'react'
 import {  Container, PostCard } from '../Components'
 import { useState, useEffect } from 'react'
-import service from '../AppWrite/DBServices'
+import service from '../Appwrite/DBServices'
 import { Query } from 'appwrite'
 import { useDispatch, useSelector } from 'react-redux'
 import { dltPost, setAllPosts } from '../Store/PostSlice'

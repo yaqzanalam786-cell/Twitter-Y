@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {Container, PostForm} from '../Components' 
-import service from '../AppWrite/DBServices';
+import service from '../Appwrite/DBServices';
 import { useNavigate,  useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { updPost } from '../Store/PostSlice';
