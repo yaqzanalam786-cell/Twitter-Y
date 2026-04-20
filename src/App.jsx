@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import {useDispatch} from 'react-redux'
 import './App.css'
-import authService from './AppWrite/AuthService.js'
+import authService from './AppWrite/AuthService'
 import { login,logout } from './Store/AuthSlice'
 import Header from './Components/Header'
 import SideNav from './Components/SideNav'
